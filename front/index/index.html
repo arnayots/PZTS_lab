@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Лабораторна: Система Лоренца</title>
+    <meta name="description" content="">
+    <meta name="author" content="Arsen Stoian">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/plotly.min.js"></script>
+<script>if(typeof window.Int16Array !== 'function')document.write("<scri"+"pt src='extras/typedarray.min.js'></scr"+"ipt>");</script>
+<script>document.write("<scri"+"pt src='extras/request_animation_frame.js'></scr"+"ipt>");</script>
+
+    <!--<script>-->
+        <!--function f1() {-->
+            <!--alert("You submited form")-->
+        <!--}-->
+        <!---->
+    <!--</script>-->
+
+    <div class="header">
+        <div class="container">
+            <p></p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+
+            <form action="/" method="GET">
+                <label for="sygma_top">σ чисельник =</label>
+                <input id="sygma_top" placeholder="σ чисельник" type="number" step="0.01" value="10"><br>
+                <label for="sygma_bottom">σ знаменник =</label>
+                <input id="sygma_bottom" placeholder="σ знаменник" type="number" step="0.01" value="1"><br>
+                <br>
+
+                <label for="ro_top">ρ чисельник =</label>
+                <input id="ro_top" placeholder="ρ чисельник" type="number" step="0.01" value="28"><br>
+                <label for="ro_bottom">ρ знаменник =</label>
+                <input id="ro_bottom" placeholder="ρ знаменник" type="number" step="0.01" value="1"><br>
+                <br>
+
+                <label for="beta_top">β чисельник =</label>
+                <input id="beta_top" placeholder="β чисельник" type="number" step="0.01" value="8"><br>
+                <label for="beta_bottom">β знаменник =</label>
+                <input id="beta_bottom" placeholder="β знаменник" type="number" step="0.01" value="3"><br>
+                <br>
+
+                <label for="x0">x(0)=</label>
+                <input id="x0" placeholder="x(0)" type="number" step="0.01" value="0"><br>
+
+                <label for="y0">y(0)=</label>
+                <input id="y0" placeholder="y(0)" type="number" step="0.01" value="1"><br>
+
+                <label for="z0">z(0)=</label>
+                <input id="z0" placeholder="z(0)" type="number" step="0.01" value="1"><br>
+
+                <label for="t_final">T =</label>
+                <input id="t_final" placeholder="T" type="number" step="0.01" value="50"><br>
+                <br>
+
+                <label for="n_pts">Кількість точок</label>
+                <input id="n_pts" placeholder="Кількість точок" type="number" step="0.01" value="10000"><br>
+
+
+            </form>
+            <button id="submit_1">Надіслати</button>
+            <p class="error" id="error_msg"></p>
+            <details>
+                <summary>Отримана відповідь</summary>
+                <p id="full_response"></p>
+            </details>
+            <div id="attr_plot"></div>
+            <div id="sens_plot"></div>
+
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
